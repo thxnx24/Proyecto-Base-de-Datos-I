@@ -101,7 +101,7 @@
             </div>
         </div>
     </header>  
-    <form id="formulario" onsubmit="return validarCampos();">
+     <form id="formulario" action= "php/datos_personales_paciente.php" method="post" onsubmit="return validarCampos();"> //Se agrego el metodo para que el formulario almacene en datos_personales_paciente.php o/
         <label for="fecha">Fecha de Registro:</label>
         <input type="date" id="fecha" name="fecha" required><br><br>
         <h1>Información Médica</h1>
