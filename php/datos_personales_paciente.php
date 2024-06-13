@@ -22,11 +22,21 @@
 
     $ejecutar = mysqli_query($conexion, $query);
 
+//Comprobación de registro hecho, en window salta a donde manda luego de ingresarlo en la bd
 if ($ejecutar) {
-    echo "Registro exitoso";
-} else {
-    echo "Error: " . $query . "<br>" . mysqli_error($conexion);
+    echo '
+        <script>
+            alert("Registro Datos Paciente realizado de forma exitosa");
+            window.location = "../perfilpaciente.html";
+    </script>
+    ';
+}else{
+    echo '
+    <script>
+        alert("Registro NO realizado, inténtelo mas tarde");
+        window.location = "../perfilpaciente.html";
+</script>
+';
 }
 
-    
-?>  
+mysqli_close($conexion);
