@@ -22,7 +22,7 @@ CREATE TABLE Paciente (
     Nombre_paciente VARCHAR(255) ,
     Primer_apellido_paciente VARCHAR(255) ,
     Segundo_apellido_paciente VARCHAR(255) ,
-    Edad_paciente INTEGER DEFAULT NULL COMMENT 'Atributo derivado de Fecha_nacimiento_paciente',
+    Edad_paciente INTEGER DEFAULT NULL,
     Fecha_nacimiento_paciente DATE ,
     Dirección_paciente VARCHAR(255) ,
     Historial_médico MEDIUMTEXT ,
