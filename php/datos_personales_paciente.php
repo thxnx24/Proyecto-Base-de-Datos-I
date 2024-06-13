@@ -3,7 +3,7 @@
     include 'conexion_bd.php';
 
 
-    var_dump($_POST); // Linea para verificar a donde va cada dato 
+   /*  var_dump($_POST); // Linea para verificar a donde va cada dato  */
 
     $nombres = $_POST['nombre'];
     $apellido_materno = $_POST['apellido1'];
@@ -40,3 +40,6 @@ if ($ejecutar) {
 }
 
 mysqli_close($conexion);
+
+    
+ 
