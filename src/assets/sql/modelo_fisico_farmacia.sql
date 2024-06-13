@@ -12,7 +12,7 @@ CREATE TABLE Doctor (
     Primer_apellido_doctor VARCHAR(255) ,
     Segundo_apellido_doctor VARCHAR(255) ,
     Especialidad VARCHAR(255) ,
-    Edad_Doctor INTEGER COMMENT 'Atributo derivado de Fecha_nacimiento_doctor',
+    Edad_Doctor INTEGER,
     Fecha_nacimiento_doctor DATE ,
     ID_Departamento INTEGER
 );
