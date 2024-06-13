@@ -68,7 +68,7 @@ main .login-form button {
 }
 
 /*SIGN UP*/
-main .signup-form {
+main .registro-form {
 	display: flex;
     flex-direction: column;
     background: #fff;
@@ -78,25 +78,25 @@ main .signup-form {
     margin-top: 20px;
 }
 
-main .signup-form h1.title {
+main .registro-form h1.title {
 	color: black;
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
-main .signup-form label {
+main .registro-form label {
     margin-bottom: 35px;
 }
 
-main .signup-form .fa-solid{
+main .registro-form .fa-solid{
 	font-size: 20px;
     color: black;
     margin-right: 10px;
 
 }
 
-main .signup-form input {
+main .registro-form input {
 	outline: none;
     border: none;
     color: black;
@@ -105,16 +105,16 @@ main .signup-form input {
     font-size: 18px;
 }
 
-main .signup-form label input::placeholder {
+main .registro-form label input::placeholder {
 	color: black;
 }
 
-main .signup-form .link {
+main .registro-form .link {
 	color: black;
     margin-bottom: 15px;
 }
 
-main .signup-form button {
+main .registro-form button {
 	color: white;
     border: none;
     background: black;
