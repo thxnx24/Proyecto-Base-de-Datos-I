@@ -26,3 +26,5 @@ ALTER TABLE tiene ADD FOREIGN KEY (ID_Doctor) REFERENCES doctor (ID_Doctor);
 
 ALTER TABLE pedido ADD FOREIGN KEY (ID_Proveedor) REFERENCES proveedor (ID_Proveedor);
 ALTER TABLE pedido ADD FOREIGN KEY (ID_Medicamento) REFERENCES medicamento (ID_Medicamento);
+
+ALTER TABLE usuario ADD FOREIGN KEY (ID_Rol) REFERENCES rol(ID_Rol);

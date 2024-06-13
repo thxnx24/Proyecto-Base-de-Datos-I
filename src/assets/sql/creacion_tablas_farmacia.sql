@@ -135,6 +135,20 @@ CREATE TABLE Pedido(
     PRIMARY KEY(ID_Pedido,ID_Proveedor,ID_Medicamento)
 );
 
+CREATE TABLE usuario(
+	ID_Usuario INTEGER PRIMARY KEY,
+    Nombre_usuario VARCHAR(255),
+    Apelido_usuario VARCHAR(255),
+    Correo_usuario VARCHAR(255) NOT NULL UNIQUE,
+    Contraseña_usuario VARCHAR(255)
+    ID_Rol INTEGER
+);
+
+CREATE TABLE rol(
+	ID_rol INTEGER PRIMARY KEY AUTO_INCREMENT,
+    Nombre_rol ENUM('Administrador','Doctor','Personal','Cliente')
+);
+
 
 
 

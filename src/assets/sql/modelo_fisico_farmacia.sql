@@ -135,6 +135,19 @@ CREATE TABLE Pedido(
     PRIMARY KEY(ID_Pedido,ID_Proveedor,ID_Medicamento)
 );
 
+CREATE TABLE usuario(
+	ID_Usuario INTEGER PRIMARY KEY,
+    Nombre_usuario VARCHAR(255),
+    Apelido_usuario VARCHAR(255),
+    Correo_usuario VARCHAR(255) NOT NULL UNIQUE,
+    Contraseña_usuario VARCHAR(255)
+    ID_rol INTEGER
+);
+
+CREATE TABLE rol(
+	ID_rol INTEGER PRIMARY KEY AUTO_INCREMENT,
+    Nombre_rol ENUM('Administrador','Doctor','Personal','Cliente')
+);
 
 ALTER TABLE doctor ADD FOREIGN KEY (ID_Departamento) REFERENCES departamento (ID_Departamento);
 ALTER TABLE paciente ADD FOREIGN KEY (ID_Departamento) REFERENCES departamento (ID_Departamento);
@@ -163,3 +176,4 @@ ALTER TABLE tiene ADD FOREIGN KEY (ID_Doctor) REFERENCES doctor (ID_Doctor);
 ALTER TABLE pedido ADD FOREIGN KEY (ID_Proveedor) REFERENCES proveedor (ID_Proveedor);
 ALTER TABLE pedido ADD FOREIGN KEY (ID_Medicamento) REFERENCES medicamento (ID_Medicamento);
 
+ALTER TABLE usuario ADD FOREIGN KEY (ID_Rol) REFERENCES rol(ID_Rol);
