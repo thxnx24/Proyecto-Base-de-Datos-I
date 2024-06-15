@@ -37,7 +37,7 @@
                             <button class="close-user-btn">&times;</button>
                             <ul>
                                 <li><a href="login.html">Ingresar</a></li>
-                                <li><a href="registro.html">Crear cuenta</a></li>
+                                <li><a href="signup.html">Crear cuenta</a></li>
                             </ul>
                         </div>
                     </div>
@@ -101,46 +101,46 @@
             </div>
         </div>
     </header>  
-     <form id="formulario" action= "php/datos_personales_paciente.php" method="post" onsubmit="return validarCampos();"> //Se agrego el metodo para que el formulario almacene en datos_personales_paciente.php o/
+    <form id="formulario" action= "php/historialpaciente.php" onsubmit="return validarCampos();">
         <label for="fecha">Fecha de Registro:</label>
         <input type="date" id="fecha" name="fecha" required><br><br>
         <h1>Información Médica</h1>
 
         <label for="nombre">Nombre paciente:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input type="text" id="nombre_paciente" name="nombre_paciente" required><br><br>
  
         <label for="nombre">ID Paciente:</label>
-        <input type="text" id="codigo" name="codigo" required><br><br>
+        <input type="text" id="idp" name="idp" required><br><br>
        
         <h1>Antecedentes Médicos</h1>
         <label for="perfil">Enfermedades crónicas</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="enfermedades1" name="enfermedades1" cols="50" rows="5" required></textarea><br><br>
 
         <label for="perfil">Enfermedades agudas previas</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="enfermedades2" name="enfermedades2" cols="50" rows="5" required></textarea><br><br>
 
         <label for="perfil">Cirugías previas</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="cirugias" name="cirugias" cols="50" rows="5" required></textarea><br><br>
 
         <label for="perfil">Hospitalizaciones previas</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="hospitalizacion" name="hospitalizacion" cols="50" rows="5" required></textarea><br><br>
 
         <label for="perfil">Historial de traumas o lesiones significativas</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="historialt" name="historialt" cols="50" rows="5" required></textarea><br><br>
     
         <h1>Alergias y Reacciones</h1>
         <label for="perfil">Alergias a medicamentos</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="alergias" name="alergias" cols="50" rows="5" required></textarea><br><br>
 
         <label for="perfil">Detalles sobre reacciones alérgicas</label>
         <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
     
         <h1>Antecedentes Familiares</h1>
         <label for="perfil">Enfermedades hereditarias</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="enfermedadesh" name="enfermedadesh" cols="50" rows="5" required></textarea><br><br>
 
         <label for="perfil">Historial de enfermedades graves en familiares directos </label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="historialg" name="historialg" cols="50" rows="5" required></textarea><br><br>
         
         <button type="submit">Enviar</button>
     <div id="datosMostrados"></div>

@@ -37,7 +37,7 @@
                             <button class="close-user-btn">&times;</button>
                             <ul>
                                 <li><a href="login.html">Ingresar</a></li>
-                                <li><a href="registro.html">Crear cuenta</a></li>
+                                <li><a href="signup.html">Crear cuenta</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,12 +102,12 @@
         </div>
     </header>  
 
-    <form id="formulario" onsubmit="return validarCampos();">
+    <form id="formulario" action= "php/datos_personales_doctor.php" method="post" onsubmit="return validarCampos();">
         <h1>Datos Personales</h1>
         <label for="nombre">ID Medico:</label>
         <input type="text" id="codigo" name="codigo" required><br><br>
 
-        <label for="nombre">Edpecialidad:</label>
+        <label for="nombre">Especialidad:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
 
         <label for="nombre">Nombres:</label>

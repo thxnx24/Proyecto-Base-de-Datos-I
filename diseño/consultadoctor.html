@@ -37,7 +37,7 @@
                             <button class="close-user-btn">&times;</button>
                             <ul>
                                 <li><a href="login.html">Ingresar</a></li>
-                                <li><a href="registro.html">Crear cuenta</a></li>
+                                <li><a href="signup.html">Crear cuenta</a></li>
                             </ul>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
             </div>
         </div>
     </header>  
-    <form id="formulario" onsubmit="return validarCampos();">
+    <form id="formulario" action= "php/consultas.php" method="post" onsubmit="return validarCampos();">
         <h1>Información de la Consulta</h1>    
         <!--text-->
         <label for="nombre">Codigo:</label>
