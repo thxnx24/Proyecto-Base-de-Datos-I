@@ -37,7 +37,7 @@
                             <button class="close-user-btn">&times;</button>
                             <ul>
                                 <li><a href="login.html">Ingresar</a></li>
-                                <li><a href="registro.html">Crear cuenta</a></li>
+                                <li><a href="signup.html">Crear cuenta</a></li>
                             </ul>
                         </div>
                     </div>
@@ -101,20 +101,20 @@
             </div>
         </div>
     </header> 
-    <form id="formulario" onsubmit="return validarCampos();">
+    <form id="formulario" action= "php/recetas.php" method="post" onsubmit="return validarCampos();"> //Se agrego el metodo para que el formulario almacene en datos_personales_paciente.php o/
         <h1>Receta</h1>  
         <label for="fecha">Fecha de la Receta:</label>
         <input type="date" id="fecha" name="fecha" required><br><br>
 
         <label for="nombre">Id Receta:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input type="text" id="idr" name="idr" required><br><br>
 
         <label for="fecha">Fecha de emisión de la receta:</label>
         <input type="date" id="fecha" name="fecha" required><br><br>
 
         <h1>Datos de la consulta</h1>  
         <label for="nombre">Id Consulta:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input type="text" id="idconsulta" name="idconsulta" required><br><br>
 
         <label for="fecha">Fecha de la Consulta:</label>
         <input type="date" id="fecha" name="fecha" required><br><br>
@@ -127,7 +127,7 @@
          <input type="date" id="fecha" name="fecha" required><br><br>
 
          <label for="nombre">ID Paciente:</label>
-         <input type="text" id="codigo" name="codigo" required><br><br>
+         <input type="text" id="idp" name="idp" required><br><br>
 
          <label for="contacto">Teléfono:</label>
          <input type="text" id="contacto" name="contacto" required><br><br>
@@ -140,10 +140,10 @@
          <input type="text" id="nombre" name="nombre" required><br><br>
 
          <label for="nombre">ID Médico:</label>
-         <input type="text" id="codigo" name="codigo" required><br><br>
+         <input type="text" id="idm" name="idm" required><br><br>
  
          <label for="nombre">Especialidad:</label>
-         <input type="text" id="nombre" name="nombre" required><br><br>
+         <input type="text" id="especialidad" name="especialidad" required><br><br>
 
          <label for="contacto">Teléfono:</label>
          <input type="text" id="contacto" name="contacto" required><br><br>
@@ -153,26 +153,26 @@
         
          <h1>Medicamentos Prescritos</h1> 
          <label for="nombre">ID Medicamento:</label>
-         <input type="text" id="codigo" name="codigo" required><br><br>
+         <input type="text" id="idme" name="idme" required><br><br>
 
          <label for="nombre">Nombre del medicamento:</label>
-         <input type="text" id="nombre" name="nombre" required><br><br>
+         <input type="text" id="nombremed" name="nombremed" required><br><br>
 
         <label for="nombre">Dosis del medicamento:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
+        <input type="text" id="dosis" name="dosis" required><br><br>
 
         <label for="perfil">Forma de administración del medicamento</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="admime" name="admime" cols="50" rows="5" required></textarea><br><br>
 
         <label for="perfil">Frecuencia de administración del medicamento</label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="frecuencia" name="frecuencia" cols="50" rows="5" required></textarea><br><br>
         
         <label for="perfil">Duración del tratamiento </label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="duracion" name="duracion" cols="50" rows="5" required></textarea><br><br>
         
         <h1>Información Adicional</h1> 
         <label for="perfil">Notas adicionales del médico (opcional) </label>
-        <textarea id="detalles" name="detalles" cols="50" rows="5" required></textarea><br><br>
+        <textarea id="adicionales" name="adicionales" cols="50" rows="5" required></textarea><br><br>
         
         <button type="submit">Enviar</button>
     <div id="datosMostrados"></div>
