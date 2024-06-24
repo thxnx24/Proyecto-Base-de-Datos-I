@@ -1,6 +1,6 @@
 <?php
 
-$conexion = mysqli_connect("localhost", "root" , "", "login_db", 3310); // ESTOY DECLArando del xamp del user sin password: root@localhost
+$conexion = mysqli_connect("localhost", "root" , "", "login_db", 3306); // ESTOY DECLArando del xamp del user sin password: root@localhost
 
 
 // El puerto que añadi en el 3310 es porque no se puede ejecutar bien el xamp en algunas pc, si en tu computadora en el XAMP , en el apartado de mysql 

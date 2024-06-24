@@ -24,7 +24,7 @@
 
      //citapaciente
 
-     $query = "INSERT INTO citapaciente(id_cita, fecha_cita, hora_cita, duracion_cita, motivo_cita, nombre_paciente, id_paciente, telefono_paciente, correo_paciente, fecha_nacimiento_paciente, sexo_paciente, nombre_medico, id_medico, especialidad_medico, telefono_medico, correo_medico)
+     $query = "INSERT INTO cita(id_cita, fecha_cita, hora_cita, duracion_cita, motivo_cita, nombre_paciente, id_paciente, telefono_paciente, correo_paciente, fecha_nacimiento_paciente, sexo_paciente, nombre_medico, id_medico, especialidad_medico, telefono_medico, correo_medico)
               VALUES ('$idc', '$fecha_cita', '$hora_cita', '$duracion_cita', '$motivo_cita', '$nombre_paciente', '$id_paciente', '$telefono_paciente', '$correo_paciente', '$fecha_nacimiento_paciente', '$sexo_paciente', '$nombre_medico', '$id_medico', '$especialidad_medico', '$telefono_medico', '$correo_medico')";
     
 

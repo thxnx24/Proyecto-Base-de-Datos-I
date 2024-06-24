@@ -78,6 +78,7 @@ CREATE TABLE Cita(
     Fecha_cita DATE,
     Hora_inicio_cita TIME,
     Hora_fin_cita TIME,
+    Nombre_paciente VARCHAR(255),
     PRIMARY KEY(ID_Cita,ID_Paciente,ID_Doctor)
 );
 
@@ -164,6 +165,7 @@ ALTER TABLE consulta ADD FOREIGN KEY (ID_Doctor) REFERENCES doctor (ID_Doctor);
 
 ALTER TABLE cita ADD FOREIGN KEY (ID_Paciente) REFERENCES paciente (ID_Paciente);
 ALTER TABLE cita ADD FOREIGN KEY (ID_Doctor) REFERENCES doctor (ID_Doctor);
+
 
 ALTER TABLE receta ADD FOREIGN KEY (ID_Consulta) REFERENCES consulta (ID_Consulta);
 ALTER TABLE receta ADD FOREIGN KEY (ID_Medicamento) REFERENCES medicamento (ID_Medicamento);
