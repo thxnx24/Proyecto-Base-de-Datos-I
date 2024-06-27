@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbarMenu = document.querySelector('.navbar-menu');
+    const menuToggle = document.querySelector('.icon__menu');
+    const navbarMenu = document.querySelector('.menu nav');
 
     menuToggle.addEventListener('click', function() {
         navbarMenu.classList.toggle('show');
     });
 });
+
 document.addEventListener("DOMContentLoaded", function() {
     const cartIconContainer = document.querySelector('.fa-basket-shopping');
     const cartIcon = document.querySelector('.content-shopping-cart .number');
@@ -37,9 +38,9 @@ document.addEventListener("DOMContentLoaded", function() {
         cartPanel.classList.remove('open');
     });
 
-    document.querySelectorAll('.add-cart').forEach(button => {
+    document.querySelectorAll('.cart').forEach(button => {
         button.addEventListener('click', function() {
-            const productCard = button.closest('.card-product');
+            const productCard = button.closest('.preview');
             const productName = productCard.querySelector('h3').textContent.trim();
             const priceElement = productCard.querySelector('.price');
             let productPriceText;
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
 
             const productPrice = parseFloat(productPriceText.replace(/[^\d.]/g, ''));
-            const productImageSrc = productCard.querySelector('.container-img img').src;
+            const productImageSrc = productCard.querySelector('img').src;
 
             addToCart(productName, productPrice, productImageSrc);
         });
@@ -93,3 +94,27 @@ document.addEventListener("DOMContentLoaded", function() {
         cartIcon.textContent = `(${totalQuantity})`;
     }
 });
+
+let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
+
+document.querySelectorAll('.products-container .product').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+});
+

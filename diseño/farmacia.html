@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>UCSP</title>
+   <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style1.css">
+   <script src="script.js" defer></script>
+</head>
+<body>   
+<header>
+    <div class="container-hero">
+        <div class="container hero">
+            <div class="customer-support">
+                <i class="fa-solid fa-headset"></i>
+                <div class="content-customer-support">
+                    <span class="text">Soporte al cliente</span>
+                    <span class="number">123-456-7890</span>
+                </div>
+            </div>
+
+            <div class="container-logo">
+                <h1 class="logo"><a href="/">UCSP</a></h1>
+                <i class="fa-solid fa-hospital"></i>
+                <h1 class="logo"><a href="/">FARMACIA</a></h1>
+            </div>
+
+            <div class="container-icons">
+                <div class="container-user">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="user-panel" style="display: none;">
+                        <div class="user-panel-content">
+                            <button class="close-user-btn">&times;</button>
+                            <ul>
+                                <li><a href="login.html">Ingresar</a></li>
+                                <li><a href="signup.html">Crear cuenta</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-cart">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <div class="content-shopping-cart">
+                        <span class="number">(0)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-panel">
+                <div class="cart-panel-content">
+                    <button class="close-cart-btn">&times;</button>
+                    <h2>Carrito:</h2>
+                    <div class="cart-items"></div>
+                    <div class="cart-summary">
+                        <p class="cart-quantity">Cantidad: <span class="total-quantity">0</span></p>
+                        <p class="cart-total">Subtotal: S/ <span class="total-price">0.00</span></p>
+                        <button class="checkout-btn">Finalizar pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	
+
+        <div class="container__menu">
+            <div class="menu">
+                <input type="checkbox" id="check__menu">
+                <label for="check__menu" id="label__check">
+                    <i class="fas fa-bars icon__menu"></i>
+                </label>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#" id="selected"></a></li>
+                        <li><a href="#">Paciente</a>
+                            <ul>
+                                <li><a href="registro_paciente.html">Perfil</a></li>
+                                <li><a href="historial_medico.html">Historial Medico</a></li>
+                                <li><a href="citapaciente.html">Reservar Cita</a></li>
+                                <li><a href="consultapaciente.html">Consulta</a></li>
+                                <li><a href="recetapaciente.html">Receta</a></li>
+                            </ul>
+                        <li><a href="#">Medico</a>
+                            <ul>
+                                <li><a href="registro_doctor.html">Registro de Doctor</a></li>
+                                <li><a href="perfildoctor.html">Perfil</a></li>
+                                <li><a href="consultadoctor.html">Consulta</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="farmacia.html">Farmacia</a></li>
+                        <li><a href="horario.html">Horario</a>    
+                    </ul>
+                </nav>
+            </div>
+        </div>
+</header> 
+
+<section class="container top-categories">
+    <h1 class="heading-1"></h1>
+    <div class="container-categories">
+        <div class="card-category category-med">
+            <p>Medicamentos</p>
+        </div>
+        <div class="card-category category-sup">
+            <p>Suplementos</p>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <div class="products-container">
+        <div class="product" data-name="p-1">
+            <img src="img/im1.png" alt="">
+            <h3>Paracetamol</h3>
+            <h3>ID: 001</h3>
+            <div class="price">S/ 10.00</div>
+         </div>
+
+         <div class="product" data-name="p-2">
+            <img src="img/im2.png" alt="">
+            <h3>Amoxicilina</h3>
+            <h3>ID: 002</h3>
+            <div class="price">S/ 12.90</div>
+         </div>
+
+         <div class="product" data-name="p-3">
+            <img src="img/im3.png" alt="">
+            <h3>Ibuprofeno</h3>
+            <h3>ID: 003</h3>
+            <div class="price">S/ 9.00</div>
+         </div>
+
+         <div class="product" data-name="p-4">
+            <img src="img/im4.png" alt="">
+            <h3>Omeprazol</h3>
+            <h3>ID: 004</h3>
+            <div class="price">S/ 16.00</div>
+         </div>
+
+         <div class="product" data-name="p-5">
+            <img src="img/im5.png" alt="">
+            <h3>Loratadina</h3>
+            <h3>ID: 005</h3>
+            <div class="price">S/ 4.00</div>
+         </div>
+
+         <div class="product" data-name="p-6">
+            <img src="img/im6.png" alt="">
+            <h3>Metformina</h3>
+            <h3>ID: 006</h3>
+            <div class="price">S/ 24.50</div>
+         </div>
+
+         <div class="product" data-name="p-7">
+            <img src="img/im7.png" alt="">
+            <h3>Enalapril</h3>
+            <h3>ID: 007</h3>
+            <div class="price">S/ 6.00</div>
+         </div>
+
+         <div class="product" data-name="p-8">
+            <img src="img/im8.png" alt="">
+            <h3>Simvastatina</h3>
+            <h3>ID: 008</h3>
+            <div class="price">S/ 37.50</div>
+         </div>
+
+         <div class="product" data-name="p-9">
+            <img src="img/im9.png" alt="">
+            <h3>Furosemida</h3>
+            <h3>ID: 009</h3>
+            <div class="price">S/ 10.00</div>
+         </div>
+
+         <div class="product" data-name="p-10">
+            <img src="img/im10.png" alt="">
+            <h3>Clopidrogel</h3>
+            <h3>ID: 010</h3>
+            <div class="price">S/ 15.30</div>
+         </div>
+
+       <div class="product" data-name="p-11">
+          <img src="img/im11.jpg" alt="">
+          <h3>Vitamina D</h3>
+          <div class="price">S/ 50.90</div>
+       </div>
+ 
+       <div class="product" data-name="p-12">
+          <img src="img/im12.jpg" alt="">
+          <h3>Omega-3</h3>
+          <div class="price">S/ 73.80</div>
+       </div>
+ 
+       <div class="product" data-name="p-13">
+          <img src="img/im13.jpg" alt="">
+          <h3>Multivitaminico</h3>
+          <div class="price">S/ 75.90</div>
+       </div>
+ 
+       <div class="product" data-name="p-14">
+          <img src="img/im14.jpg" alt="">
+          <h3>Calcio</h3>
+          <div class="price">S/ 47.90</div>
+       </div>
+ 
+       <div class="product" data-name="p-15">
+          <img src="img/im15.jpg" alt="">
+          <h3>Magnesio</h3>
+          <div class="price">S/ 94.90</div>
+       </div>
+ 
+       <div class="product" data-name="p-16">
+          <img src="img/im16.jpg" alt="">
+          <h3>Zinc</h3>
+          <div class="price">S/ 39.90</div>
+       </div>
+ 
+       <div class="product" data-name="p-17">
+         <img src="img/im17.jpg" alt="">
+         <h3>Vitamina B12</h3>
+         <div class="price">S/ 59.90</div>
+      </div>
+ 
+      <div class="product" data-name="p-18">
+         <img src="img/im18.jpg" alt="">
+         <h3>Probioticos</h3>
+         <div class="price">S/ 93.90</div>
+      </div>
+ 
+      <div class="product" data-name="p-19">
+         <img src="img/im19.jpg" alt="">
+         <h3>Vitamina C</h3>
+         <div class="price">S/ 29.80</div>
+      </div>
+ 
+      <div class="product" data-name="p-20">
+         <img src="img/im20.jpg" alt="">
+         <h3>Colageno</h3>
+         <div class="price">S/ 34.90</div>
+      </div>
+    </div>
+ </div>
+ 
+ <div class="products-preview">
+
+    <div class="preview" data-target="p-1">
+        <i class="fas fa-times"></i>
+        <img src="img/im1.png" alt="">
+        <h3>Paracetamol</h3>
+        <p>Clase: Analgesico</p>
+        <p>Exp.Date: 31-12-2025</p>
+        <p>Stock: 100</p>
+        <div class="price">S/ 10.00</div>
+        <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+   </div>
+
+   <div class="preview" data-target="p-2">
+        <i class="fas fa-times"></i>
+        <img src="img/im2.png" alt="">
+        <h3>Amoxicilina</h3>
+        <p>Clase: Antibiotico</p>
+        <p>Exp.Date: 20-08-2024</p>
+        <p>Stock: 200</p>
+        <div class="price">S/ 12.90</div>
+        <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-3">
+        <i class="fas fa-times"></i>
+        <img src="img/im3.png" alt="">
+        <h3>Ibuprofeno</h3>
+        <p>Clase: Antiinflamatorio</p>
+        <p>Exp.Date: 15-06-2025</p>
+        <p>Stock: 150</p>
+        <div class="price">S/ 9.00</div>
+        <div class="buttons">
+        <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-4">
+        <i class="fas fa-times"></i>
+        <img src="img/im4.png" alt="">
+        <h3>Omeprazol</h3>
+        <p>Clase: Antiulceroso</p>
+        <p>Exp.Date: 05-11-2024</p>
+        <p>Stock: 180</p>
+        <div class="price">S/ 16.00</div>
+        <div class="buttons">
+           <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-5">
+        <i class="fas fa-times"></i>
+        <img src="img/im5.png" alt="">
+        <h3>Loratadina</h3>
+        <p>Clase: Antihistaminico</p>
+        <p>Exp.Date: 10-03-2025</p>
+        <p>Stock: 120</p>
+        <div class="price">S/ 4.00</div>
+        <div class="buttons">
+           <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-6">
+        <i class="fas fa-times"></i>
+        <img src="img/im6.png" alt="">
+        <h3>Metformina</h3>
+        <p>Clase: Antidiabetico</p>
+        <p>Exp.Date: 22-07-2024</p>
+        <p>Stock: 300</p>
+        <div class="price">S/ 24.50</div>
+        <div class="buttons">
+           <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-7">
+        <i class="fas fa-times"></i>
+        <img src="img/im7.png" alt="">
+        <h3>Enalapril</h3>
+        <p>Clase: Antihipertensivo</p>
+        <p>Exp.Date: 30-01-2025</p>
+        <p>Stock: 133</p>
+        <div class="price">S/ 6.00</div>
+        <div class="buttons">
+           <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-8">
+        <i class="fas fa-times"></i>
+        <img src="img/im8.png" alt="">
+        <h3>Simvastatina</h3>
+        <p>Clase: Hipolipemiante</p>
+        <p>Exp.Date: 14-10-2024</p>
+        <p>Stock: 160</p>
+        <div class="price">S/ 37.50</div>
+        <div class="buttons">
+           <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-9">
+        <i class="fas fa-times"></i>
+        <img src="img/im9.png" alt="">
+        <h3>Furosemida</h3>
+        <p>Clase: Piuretico</p>
+        <p>Exp.Date: 30-09-2025</p>
+        <p>Stock: 90</p>
+        <div class="price">S/ 10.00</div>
+        <div class="buttons">
+           <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-10">
+        <i class="fas fa-times"></i>
+        <img src="img/im10.png" alt="">
+        <h3>Clopidrogel</h3>
+        <p>Clase: Antiplaquetario</p>
+        <p>Exp.Date: 15-12-2024</p>
+        <p>Stock: 75</p>
+        <div class="price">S/ 15.30</div>
+        <div class="buttons">
+           <a href="#" class="cart">Agregar al carrito</a>
+        </div>
+    </div>
+
+    <div class="preview" data-target="p-11">
+         <i class="fas fa-times"></i>
+         <img src="img/im11.jpg" alt="">
+         <h3>Vitamina D</h3>
+         <p>ID: S011</p>
+         <p>Stock: 250</p>
+         <div class="price">S/ 50.90</div>
+         <div class="buttons">
+             <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+    </div>
+ 
+    <div class="preview" data-target="p-12">
+         <i class="fas fa-times"></i>
+         <img src="img/im12.jpg" alt="">
+         <h3>Omega-3</h3>
+         <p>ID: S012</p>
+         <p>Stock: 200</p>
+         <div class="price">S/ 73.80</div>
+         <div class="buttons">
+             <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ 
+     <div class="preview" data-target="p-13">
+         <i class="fas fa-times"></i>
+         <img src="img/im13.jpg" alt="">
+         <h3>Multivitaminico</h3>
+         <p>ID: S013</p>
+         <p>Stock: 200</p>
+         <div class="price">S/ 75.90</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ 
+     <div class="preview" data-target="p-14">
+         <i class="fas fa-times"></i>
+         <img src="img/im14.jpg" alt="">
+         <h3>Calcio</h3>
+         <p>ID: S014</p>
+         <p>Stock: 180</p>
+         <div class="price">S/ 47.90</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ 
+     <div class="preview" data-target="p-15">
+         <i class="fas fa-times"></i>
+         <img src="img/im15.jpg" alt="">
+         <h3>Magnesio</h3>
+         <p>ID: S015</p>
+         <p>Stock: 150</p>
+         <div class="price">S/ 94.90</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ 
+     <div class="preview" data-target="p-16">
+         <i class="fas fa-times"></i>
+         <img src="img/im16.jpg" alt="">
+         <h3>Zinc</h3>
+         <p>ID: S016</p>
+         <p>Stock: 220</p>
+         <div class="price">S/ 39.90</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ 
+     <div class="preview" data-target="p-17">
+         <i class="fas fa-times"></i>
+         <img src="img/im17.jpg" alt="">
+         <h3>Vitamina B12</h3>
+         <p>ID: S017</p>
+         <p>Stock: 160</p>
+         <div class="price">S/ 59.90</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+     
+     <div class="preview" data-target="p-18">
+         <i class="fas fa-times"></i>
+         <img src="img/im18.jpg" alt="">
+         <h3>Probioticos</h3>
+         <p>ID: S018</p>
+         <p>Stock: 100</p>
+         <div class="price">S/ 93.90</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ 
+     <div class="preview" data-target="p-19">
+         <i class="fas fa-times"></i>
+         <img src="img/im19.jpg" alt="">
+         <h3>Vitamina C</h3>
+         <p>ID: S019</p>
+         <p>Stock: 270</p>
+         <div class="price">S/ 29.80</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ 
+     <div class="preview" data-target="p-20">
+         <i class="fas fa-times"></i>
+         <img src="img/im20.jpg" alt="">
+         <h3>Colageno</h3>
+         <p>ID: S020</p>
+         <p>Stock: 140</p>
+         <div class="price">S/ 34.90</div>
+         <div class="buttons">
+            <a href="#" class="cart">Agregar al carrito</a>
+         </div>
+     </div>
+ </div>
+ 
+ <script>
+    document.querySelector('.checkout-btn').addEventListener('click', function() {
+        window.open('pago.html', '_blank');
+    });
+</script>
+
+ </body>
+ </html>
