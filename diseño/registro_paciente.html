@@ -80,7 +80,11 @@
                         <li><a href="#">Paciente</a>
                             <ul>
                                 <li><a href="registro_paciente.html">Registro de Paciente</a></li>
+<<<<<<< HEAD
                                 <li><a href="historial_medico.html">Historial Medico</a></li>
+=======
+                                <li><a href="historialpaciente.html">Historial Medico</a></li>
+>>>>>>> origin/main
                                 <li><a href="citapaciente.html">Reservar Cita</a></li>
                                 <li><a href="consultapaciente.html">Consulta</a></li>
                                 <li><a href="recetapaciente.html">Receta</a></li>
@@ -101,7 +105,11 @@
         </div>
     </header>  
 
+<<<<<<< HEAD
     <form id="formulario" action="registro_paciente.php" method="post" onsubmit="return validarCampos();">
+=======
+    <form id="formulario" action="datos_personales_paciente.php" method="post" onsubmit="return validarCampos();">
+>>>>>>> origin/main
         <h1>Registro de Datos Personales del Paciente</h1>
         
         <label for="nombre">Nombres:</label>
@@ -142,6 +150,7 @@
     </form>
     <div id="datosMostrados"></div>
 </body>
+<<<<<<< HEAD
     <script>
         // Función para calcular la edad
         function calcularEdad(fechaNacimiento) {
@@ -160,6 +169,26 @@
             const edadCalculada = calcularEdad(this.value);
             document.getElementById('edad').value = edadCalculada; // Actualiza el campo oculto con la edad calculada
         });
+=======
+<script>
+    // Función para calcular la edad
+    function calcularEdad(fechaNacimiento) {
+        const fechaNac = new Date(fechaNacimiento);
+        const fechaActual = new Date();
+        let edad = fechaActual.getFullYear() - fechaNac.getFullYear();
+        const diferenciaMeses = fechaActual.getMonth() - fechaNac.getMonth();
+        if (diferenciaMeses < 0 || (diferenciaMeses === 0 && fechaActual.getDate() < fechaNac.getDate())) {
+            edad--;
+        }
+        return edad;
+    }
+    
+    // Event listener para el campo de fecha de nacimiento
+    document.getElementById('fecha').addEventListener('change', function() {
+        const edadCalculada = calcularEdad(this.value);
+        document.getElementById('edad').value = edadCalculada; // Actualiza el campo oculto con la edad calculada
+    });
+>>>>>>> origin/main
     </script>
 </html>
 
